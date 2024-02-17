@@ -10,7 +10,7 @@ class Position
     public Position(int x, int y)
     {
         X = x;    // To intialise thees  values by creating the object with the values
-        Y = y;
+        Y = y;    //  To intialise thees  values by creating the object with the values
     }
 }
 
@@ -115,10 +115,10 @@ class Board
         {
             for (int x = 0; x < 6; x++)
             {
-                Console.Write("  |  " + Grid[x, y].Occupant + "  |  ");
+                Console.Write("  |  " + Grid[x, y].Occupant + "  |  ");        
             }
-            Console.WriteLine();
-            Console.Write("________________________________________________________________\n\n");
+            Console.WriteLine();            
+            Console.Write("________________________________________________________________\n\n");       
         }
     }
 
@@ -174,7 +174,7 @@ class Board
         {
 
 
-            Grid[player.Position.X, player.Position.Y].Occupant = "-";
+            Grid[player.Position.X, player.Position.Y].Occupant = "-";   // To vacant the previous position of the players p1 and p2 
 
 
 
