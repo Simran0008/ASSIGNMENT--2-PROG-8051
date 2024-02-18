@@ -279,7 +279,7 @@ class Game
         string movements = "";
         for (int i = 0; i <= player.currentPositionIndex; i++)
         {
-            movements += $"({player.PositionHistory[i].X},{player.PositionHistory[i].Y}) ";
+            movements += $"({player.PositionHistory[i].X},{player.PositionHistory[i].Y}) ";    // add method to get the movements of the players
         }
         return movements;
     }
