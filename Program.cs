@@ -1,16 +1,21 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 using System;
 
 class Position
 {
     public int X { get; } // This is for to check the position of the Player in the board 
-    public int Y { get; } // This is for to check the position of the Player in the
+    public int Y { get; } 
 
     public Position(int x, int y)
     {
+<<<<<<< HEAD
+        X = x;    // To intialise attributes
+        Y = y;
+=======
         X = x;    // To intialise thees  values by creating the object with the values
         Y = y;    //  To intialise thees  values by creating the object with the values
+>>>>>>> 55253a13306e925aff80e94531015f91fb84e554
     }
 }
 
@@ -21,7 +26,7 @@ class Player
     public int GemCount { get; set; }
     public Position[] PositionHistory { get; } = new Position[30]; // Assuming a maximum of 30 positions as board is 6X6.
 
-    public int currentPositionIndex = 0; // To check the Index of the array of the board
+    public int currentPositionIndex = 0; // Tocheck the indices
 
     public Player(string name, Position position)
     {
@@ -92,7 +97,7 @@ class Board
 
         Grid[0, 0].Occupant = "P1";
         Grid[5, 5].Occupant = "P2";
-        //Initialise the gem values 
+
         Grid[4, 3].Occupant = "G";
         Grid[4, 1].Occupant = "G";
         Grid[3, 3].Occupant = "G";
@@ -102,7 +107,6 @@ class Board
         Grid[3, 3].Occupant = "G";
         Grid[3, 1].Occupant = "G";
 
-        // intialise the obstackles
         Grid[1, 2].Occupant = "O";
         Grid[3, 4].Occupant = "O";
         Grid[0, 4].Occupant = "O";
@@ -165,7 +169,8 @@ class Board
                 newX++;
                 break;
             default:
-                Console.WriteLine("Invalid direction. Please use U, D, L, or R.");
+                Console.WriteLine("Please use U, D, L, or R.");
+                System.Threading.Thread.Sleep(1000); 
                 return false;
         }
 
@@ -183,7 +188,8 @@ class Board
         }
         else
         {
-            Console.WriteLine("Invalid move. Obstacle or out of bounds.");
+            Console.WriteLine("Obstacle in a way or out of bounds array.");
+            System.Threading.Thread.Sleep(1000);
             return false;
         }
     }
@@ -219,6 +225,7 @@ class Game
     {
         while (!IsGameOver())
         {
+            Console.Clear();
             Console.WriteLine($"Turn {TotalTurns + 1}: {CurrentTurn.Name}'s turn");
             Board.UpdateBoardWithPlayers(Player1, Player2);
             Board.Display();
@@ -233,7 +240,10 @@ class Game
                 Board.CollectGem(CurrentTurn);
 
                 Console.WriteLine($"{CurrentTurn.Name} moved {direction}");
+
+
                 Board.UpdateBoardWithPlayers(Player1, Player2);
+                System.Threading.Thread.Sleep(1000);
                 Board.Display();
 
                 SwitchTurn();
