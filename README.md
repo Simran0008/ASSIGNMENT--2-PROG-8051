@@ -1,4 +1,4 @@
-Gem Hunters console game Youtube Video Link of Screencast video: 
+Gem Hunters console game Youtube Video Link of Screencast video: https://youtu.be/o6yFGvtsttc
 The "Gem Hunters" game is a console-based 2D adventure with a 6x6 square board as the battleground. 
 Players, denoted as "P1" and "P2," begin their gem-collecting trip from opposite directions. 
 The board is studded with expensive gems ("G") strategically placed at the beginning of the game and serves as the coveted prizes. 
